@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff; /* White background */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.menu-bar {
+    background: #f8f8f8;
+    color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.menu-bar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-bar nav {
+    display: flex;
+}
+
+.menu-bar .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar .menu li {
+    margin: 0 15px;
+}
+
+.menu-bar .menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.menu-bar .menu li a:hover,
+.menu-bar .menu li a.active {
+    color: #007BFF;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.editor-pane {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.toolbar-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.toolbar button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #d3d3d3; /* Light grey color */
+    color: #333;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.toolbar button:hover {
+    background: #b0b0b0; /* Darker grey on hover */
+}
+
+.file-upload {
+    margin-bottom: 20px;
+}
+
+.file-upload input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.file-upload input:hover {
+    border-color: #007BFF; /* Blue border on hover */
+}
+
+.editor {
+    width: 100%;
+    height: calc(100vh - 400px); /* Adjusted height to make space for results */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    overflow-y: auto;
+    background: #fff;
+    color: #000;
+    text-align: left;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease; /* Smooth transition */
+}
+
+.editor:focus {
+    border-color: #007BFF; /* Blue border on focus */
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Added margin to separate from editor */
+}
+
+.result div {
+    flex: 1 1 30%; /* Adjusted to fit three items per row */
+    margin: 10px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #000;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.result div:hover {
+    background: #e0e0e0; /* Slightly darker background on hover */
+}
+
+.download-options {
+    margin-top: 20px;
+}
+
+.download-options button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #d3d3d3; /* Light grey color */
+    color: #333;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.download-options button:hover {
+    background: #b0b0b0; /* Darker grey on hover */
+}
+
+.highlight {
+    background-color: yellow;
+}
