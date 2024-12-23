@@ -1,1 +1,17 @@
-{ "routes": [ { "route": "/api/*", "allowedRoles": ["authenticated"] } ], "auth": { "identityProviders": { "github": { "registration": { "clientIdSettingName": "GITHUB_CLIENT_ID", "clientSecretSettingName": "GITHUB_CLIENT_SECRET" } }, "azureActiveDirectory": { "registration": { "openIdIssuer": "https://login.microsoftonline.com/88398f6f-4fbb-41a7-8279-b874689286f2/v2.0", "clientIdSettingName": "AAD_CLIENT_ID", "clientSecretSettingName": "AAD_CLIENT_SECRET" } } } } }
+{
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "allowedRoles": [ "authenticated" ]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad"
+    }
+  }
+}
