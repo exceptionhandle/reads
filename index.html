@@ -46,6 +46,7 @@
             </div>
         </div>
     </div>
+    <form action="https://reads.azurewebsites.net/api/SnedFeedback" method="POST"> <label for="name">Name:</label><br> <input type="text" id="name" name="name" required><br> <label for="email">Email:</label><br> <input type="email" id="email" name="email" required><br> <label for="message">Message:</label><br> <textarea id="message" name="message" required></textarea><br> <input type="submit" value="Send"> </form>
     <script src="scripts.js"></script>
     <script>
     let startTime;
@@ -336,6 +337,5 @@ function updateCounts(text) {
     document.getElementById('lineCount').textContent = lineCount;
 }
 </script>
-	<form action="https://reads.azurewebsites.net/api/SnedFeedback" method="POST"> <label for="name">Name:</label><br> <input type="text" id="name" name="name" required><br> <label for="email">Email:</label><br> <input type="email" id="email" name="email" required><br> <label for="message">Message:</label><br> <textarea id="message" name="message" required></textarea><br> <input type="submit" value="Send"> </form>
 </body>
 </html>
