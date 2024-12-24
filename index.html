@@ -135,26 +135,6 @@
         }
     });
 
-    document.getElementById('fileInput1').addEventListener('change', function(event) {
-        handleFileUpload(event, 'textInput1');
-    });
-
-    document.getElementById('fileInput2').addEventListener('change', function(event) {
-        handleFileUpload(event, 'textInput2');
-    });
-
-    document.getElementById('textInput1').addEventListener('input', function() {
-        const text = this.innerText;
-        updateCounts(text, 'textInput1');
-        compareTexts();
-    });
-
-    document.getElementById('textInput2').addEventListener('input', function() {
-        const text = this.innerText;
-        updateCounts(text, 'textInput2');
-        compareTexts();
-    });
-
     document.getElementById('contactForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
 
