@@ -60,7 +60,7 @@
 </form>
     <script>
     (async function() {
-        const { text } = await( await fetch(`https://reads.azurewebsites.net/api/message`)).json();
+        const { text } = await( await fetch(`https://reads.azurewebsites.net/api/SnedFeedback`)).json();
         document.querySelector('#name').textContent = text;
     }());
     </script>
