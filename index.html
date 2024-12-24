@@ -60,7 +60,7 @@
 </form>
     <script>
     (async function() {
-        const { text } = await( await fetch(`https://reads.azurewebsites.net/api/SnedFeedback`)).json();
+        const { text } = await( await fetch(`api/SnedFeedback`)).json();
         document.querySelector('#name').textContent = text;
     }());
     </script>
@@ -275,21 +275,6 @@
 
     function alignText(alignment) {
         document.execCommand('justify' + alignment);
-    }
-
-    function submitFeedback() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const feedback = document.getElementById('feedback').value;
-        const featureRating = document.getElementById('featureRating').value;
-        const featureRequest = document.getElementById('featureRequest').value;
-
-        if (name && email && feedback && featureRating) {
-            const mailtoLink = `mailto:keshav7890@gmail.com?subject=Feedback from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AFeedback: ${feedback}%0D%0ARating: ${featureRating}%0D%0AFeature Requests: ${featureRequest}`;
-            window.location.href = mailtoLink;
-        } else {
-            alert('Please fill out all fields.');
-        }
     }
 
     document.querySelectorAll('.tab').forEach(tab => {
